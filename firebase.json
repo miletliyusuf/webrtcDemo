@@ -1,0 +1,27 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "site": "calenduprtc",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    // "rewrites": [
+    //   {
+    //     "source": "**",
+    //     "destination": "/index.html"
+    //   }
+    // ],
+    "redirects": [
+      {
+        "source": "meeting/:id",
+        "destination": "https://calenduprtc.web.app/meeting/:id",
+        "type": 301
+      }
+    ]
+  }
+}
